@@ -7581,10 +7581,10 @@ h1, h2, h3, h4, h5,
             list-style: none; }
         .owl-carousel.home-slider .slider-item .slider-text .breadcrumbs {
           text-transform: uppercase;
-          font-size: 28px;
+          font-size: 18px;
           letter-spacing: 1px; }
           .owl-carousel.home-slider .slider-item .slider-text .breadcrumbs span {
-            border-bottom: 2px solid rgba(255, 255, 255, 0.1); }
+            border-bottom: 0px solid rgba(255, 255, 255, 0.1); }
             .owl-carousel.home-slider .slider-item .slider-text .breadcrumbs span a {
               color: #fff; }
       .owl-carousel.home-slider .slider-item.bread-item {
