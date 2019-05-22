@@ -100,6 +100,16 @@
     
 	<div class="heading-section text-center ftco-animate mt-5">
         <h2 class="mb-4">Restaurants</h2>
+        <form name="myform">
+          How do you want to sort:
+          <select id="mySelect" onchange="mySort(value, 'Vozdovac', 'en')">
+            <option value='0'></option>
+            <option value='1'>name</option>
+            <option value='2'>rate</option>
+            <option value='3'>position</option>
+          </select>
+        </form>
+
         <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
     </div>
 	
@@ -181,6 +191,8 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
+  <script type="text/javascript" src="json/base.json"></script>
     
   </body>
 </html>
