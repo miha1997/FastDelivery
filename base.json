@@ -1,0 +1,48 @@
+{ 	
+	"restaurants" : [
+		{
+			"name" : "Piano Loco",
+			"region" : "Vozdovac",
+			"page_sr" : "pianoloco.html",
+			"page_en" : "pianoloco-en.html",
+			"rateSum" : 40,
+			"rateNum" : 5,
+			"picture" : "images/pianoloco.jpg",
+			"address" : "Vojvode Stepe 250"
+		},
+		{
+			"name" : "Big Pizza",
+			"region" : "Vozdovac",
+			"page_sr" : "pianoloco.html",
+			"page_en" : "pianoloco-en.html",
+			"rateSum" : 30,
+			"rateNum" : 6,
+			"picture" : "images/pianoloco.jpg",
+			"address" : "Vojvode Stepe 252"
+		},
+		{
+			"name" : "Furuna",
+			"region" : "Vozdovac",
+			"page_sr" : "pianoloco.html",
+			"page_en" : "pianoloco-en.html",
+			"rateSum" : 42,
+			"rateNum" : 8,
+			"picture" : "images/pianoloco.jpg",
+			"address" : "Vojvode Stepe 251"
+
+		},
+		{
+			"name" : "Nebitan",
+			"region" : "Novi Bg",
+			"page_sr" : "pianoloco.html",
+			"page_en" : "pianoloco-en.html",
+			"rateSum" : 40,
+			"rateNum" : 10,
+			"picture" : "images/pianoloco.jpg",
+			"address" : "Vojvode Stepe 253"
+
+		}
+
+	]
+	
+}

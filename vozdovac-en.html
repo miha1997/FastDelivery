@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body onload="mySort(0, 'Vozdovac', 'en')">
   	<nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light">
       <div class="container">
         <a class="navbar-brand" href="index.html"><span class="flaticon-pizza-1 mr-1"></span>Pizza<br><small>Delicious</small></a>
@@ -99,8 +99,19 @@
     	</div>
     </section>
     
-	<div class="heading-section text-center ftco-animate">
-        <h2>Restaurants</h2>
+
+	<div class="heading-section text-center ftco-animate mt-5">
+        <h2 class="mb-4">Restaurants</h2>
+        <form name="myform">
+          How do you want to sort:
+          <select id="mySelect" onchange="mySort(value, 'Vozdovac', 'en')">
+            <option value='0'></option>
+            <option value='1'>name</option>
+            <option value='2'>rate</option>
+            <option value='3'>position</option>
+          </select>
+        </form>
+
         <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
     </div>
 	
@@ -109,30 +120,44 @@
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="pianoloco-en.html" class="block-20" style="background-image: url('images/pianoloco.jpg');">
+              <a id="link1" href="#" class="block-20" style="">
               </a>
               <div class="text text-center py-4 d-block">
-                <h2 class="heading mt-2"><a href="pianoloco-en.html">PIANO LOCO</a></h2>
+
+                <h2 class="heading mt-2"><a id="name1" href="#"></a></h2>
+                <h3 id = "rate1" class="heading mt-2"></h3>
+                <h3  id = "address1" class="heading mt-2"></h3>
+
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/bigpizza.jpg');">
+
+              <a id='link2' href="#" class="block-20" style="">
               </a>
               <div class="text text-center py-4 d-block">
-                <h2 class="heading mt-2"><a href="#">BIG PIZZA</a></h2>
+                <h2 class="heading mt-2"><a id="name2" href="#"></a></h2>
+                <h3 id = "rate2" class="heading mt-2"></h3>
+                <h3  id = "address2" class="heading mt-2"></h3>
+
+
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/furuna.jpg');">
+
+              <a id="link3" href="#" class="block-20" style="">
               </a>
               <div class="text text-center py-4 d-block">
-                <h2 class="heading mt-2"><a href="#">FURUNA</a></h2>
+                <h2 class="heading mt-2"><a id="name3" href="#"></a></h2>
+                <h3 id = "rate3" class="heading mt-2"></h3>
+                <h3  id = "address3" class="heading mt-2"></h3>
+
+
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
               </div>
             </div>
@@ -182,6 +207,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
     
   </body>
 </html>
