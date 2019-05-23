@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body onload="mySort(0, 'Vozdovac', 'en')">
   	<nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light">
       <div class="container">
         <a class="navbar-brand" href="index.html"><span class="flaticon-pizza-1 mr-1"></span>Pizza<br><small>Delicious</small></a>
@@ -118,30 +118,36 @@
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="pianoloco-en.html" class="block-20" style="background-image: url('images/pianoloco.jpg');">
+              <a id="link1" href="#" class="block-20" style="">
               </a>
               <div class="text text-center py-4 d-block">
-                <h2 class="heading mt-2"><a href="pianoloco-en.html">Piano Loco</a></h2>
+                <h2 class="heading mt-2"><a id="name1" href="#"></a></h2>
+                <h3 id = "rate1" class="heading mt-2"></h3>
+                <h3  id = "address1" class="heading mt-2"></h3>
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_4.jpg');">
+              <a id='link2' href="#" class="block-20" style="">
               </a>
               <div class="text text-center py-4 d-block">
-                <h2 class="heading mt-2"><a href="#">Big Pizza</a></h2>
+                <h2 class="heading mt-2"><a id="name2" href="#"></a></h2>
+                <h3 id = "rate2" class="heading mt-2"></h3>
+                <h3  id = "address2" class="heading mt-2"></h3>
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_5.jpg');">
+              <a id="link3" href="#" class="block-20" style="">
               </a>
               <div class="text text-center py-4 d-block">
-                <h2 class="heading mt-2"><a href="#">Furuna</a></h2>
+                <h2 class="heading mt-2"><a id="name3" href="#"></a></h2>
+                <h3 id = "rate3" class="heading mt-2"></h3>
+                <h3  id = "address3" class="heading mt-2"></h3>
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
               </div>
             </div>
@@ -192,7 +198,6 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
   <script type="text/javascript" src="js/functions.js"></script>
-  <script type="text/javascript" src="json/base.json"></script>
     
   </body>
 </html>
