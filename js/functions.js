@@ -15,7 +15,14 @@ function sortByName(region, langugage){
 					restaurants[j] = temp;
 				}
 
-		//first block
+		var links = document.getElementById('myform');
+		var navs = links.getElementsByClassName('nav-link');
+		if(navs[0].classList.contains('active')) navs[0].classList.replace('active', 'disabled');
+		navs[1].classList.add('active');
+		if(navs[2].classList.contains('active')) navs[2].classList.replace('active', 'disabled');
+		if(navs[3].classList.contains('active')) navs[3].classList.replace('active', 'disabled');
+
+		//first block		
 		document.getElementById('name1').innerHTML= restaurants[0].name;
 		if(langugage == 'en')
 			document.getElementById('name1').href = restaurants[0].page_en;
@@ -83,7 +90,14 @@ function sortByAddress(region, langugage){
 					restaurants[j] = temp;
 				}
 
-		//first block
+		var links = document.getElementById('myform');
+		var navs = links.getElementsByClassName('nav-link');
+		if(navs[0].classList.contains('active')) navs[0].classList.replace('active', 'disabled');
+		if(navs[1].classList.contains('active')) navs[1].classList.replace('active', 'disabled');		
+		if(navs[2].classList.contains('active')) navs[2].classList.replace('active', 'disabled');
+		navs[3].classList.add('active');
+
+		//first block		
 		document.getElementById('name1').innerHTML= restaurants[0].name;
 		if(langugage == 'en')
 			document.getElementById('name1').href = restaurants[0].page_en;
@@ -151,6 +165,13 @@ function sortByRate(region, langugage){
 					restaurants[j] = temp;
 				}
 
+		var links = document.getElementById('myform');
+		var navs = links.getElementsByClassName('nav-link');
+		if(navs[0].classList.contains('active')) navs[0].classList.replace('active', 'disabled');
+		if(navs[1].classList.contains('active')) navs[1].classList.replace('active', 'disabled');
+		navs[2].classList.add('active');
+		if(navs[3].classList.contains('active')) navs[3].classList.replace('active', 'disabled');
+	
 		//first block
 		document.getElementById('name1').innerHTML= restaurants[0].name;
 		if(langugage == 'en')
@@ -210,6 +231,13 @@ function defaultSort(region, langugage){
 		for(var i = 0; i < json.restaurants.length; i++)
 			if(json.restaurants[i].region == region)
 				restaurants.push(json.restaurants[i]);
+
+		var links = document.getElementById('myform');
+		var navs = links.getElementsByClassName('nav-link');
+		navs[0].classList.add('active');
+		if(navs[1].classList.contains('active')) navs[1].classList.replace('active', 'disabled');
+		if(navs[2].classList.contains('active')) navs[2].classList.replace('active', 'disabled');
+		if(navs[3].classList.contains('active')) navs[3].classList.replace('active', 'disabled');
 
 		//first block
 		document.getElementById('name1').innerHTML= restaurants[0].name;
