@@ -98,72 +98,72 @@
 			</div>
     	</div>
     </section>
-    
-
-	<div class="heading-section text-center ftco-animate mt-5">
-        <h2 class="mb-4">Restaurants</h2>
-        <form name="myform">
-          How do you want to sort:
-          <select id="mySelect" onchange="mySort(value, 'Vozdovac', 'en')">
-            <option value='0'></option>
-            <option value='1'>name</option>
-            <option value='2'>rate</option>
-            <option value='3'>position</option>
-          </select>
-        </form>
-
-        <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+  
+	<div class="heading-section text-center ftco-animate">
+            <h2 class="mb-4">Sort restaurants by:</h2>
+            <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
     </div>
-	
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry align-self-stretch">
-              <a id="link1" href="#" class="block-20" style="">
-              </a>
-              <div class="text text-center py-4 d-block">
+  
+	<section class="ftco-menu">		
+    	<div class="container-fluid">
+    		<div class="row d-md-flex">	    			
+	    		<div class="col-lg-12 ftco-animate p-md-5">	
+					<div class="col-md-12 nav-link-wrap mb-5">
+						<div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">							
+							<form name="myform">
+								&nbsp;
+							  <a class="nav-link active" id="a1" onclick="mySort(0, 'Vozdovac', 'en')" data-toggle="pill" href="#">Default</a>
+							
+							  <a class="nav-link" id="a2" onclick="mySort(1, 'Vozdovac', 'en')" data-toggle="pill" href="#">Name</a>
+								
+							  <a class="nav-link" id="a3" onclick="mySort(2, 'Vozdovac', 'en')" data-toggle="pill" href="#">Rating</a>
+							  
+							  <a class="nav-link" id="a4" onclick="mySort(3, 'Vozdovac', 'en')" data-toggle="pill" href="#">Location</a>
+							</form>
+						</div>
+		          </div>
+				<div class="col-md-12 d-flex align-items-center">
+					<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry align-self-stretch">
+					  <a id="link1" href="#" class="block-20" style="">
+					  </a>
+					  <div class="text text-center py-4 d-block">
+						<h2 class="heading mt-2"><a id="name1" href="#"></a></h2>
+						<h3 id = "rate1" class="heading mt-2"></h3>
+						<h3  id = "address1" class="heading mt-2"></h3>
+						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+					  </div>
+					</div>
+				  </div>
+				  <div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry align-self-stretch">
+					  <a id='link2' href="#" class="block-20" style="">
+					  </a>
+					  <div class="text text-center py-4 d-block">
+						<h2 class="heading mt-2"><a id="name2" href="#"></a></h2>
+						<h3 id = "rate2" class="heading mt-2"></h3>
+						<h3  id = "address2" class="heading mt-2"></h3>
+						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+					  </div>
+					</div>
+				  </div>
+				  <div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry align-self-stretch">
 
-                <h2 class="heading mt-2"><a id="name1" href="#"></a></h2>
-                <h3 id = "rate1" class="heading mt-2"></h3>
-                <h3  id = "address1" class="heading mt-2"></h3>
-
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry align-self-stretch">
-
-              <a id='link2' href="#" class="block-20" style="">
-              </a>
-              <div class="text text-center py-4 d-block">
-                <h2 class="heading mt-2"><a id="name2" href="#"></a></h2>
-                <h3 id = "rate2" class="heading mt-2"></h3>
-                <h3  id = "address2" class="heading mt-2"></h3>
-
-
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry align-self-stretch">
-
-              <a id="link3" href="#" class="block-20" style="">
-              </a>
-              <div class="text text-center py-4 d-block">
-                <h2 class="heading mt-2"><a id="name3" href="#"></a></h2>
-                <h3 id = "rate3" class="heading mt-2"></h3>
-                <h3  id = "address3" class="heading mt-2"></h3>
-
-
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+					  <a id="link3" href="#" class="block-20" style="">
+					  </a>
+					  <div class="text text-center py-4 d-block">
+						<h2 class="heading mt-2"><a id="name3" href="#"></a></h2>
+						<h3 id = "rate3" class="heading mt-2"></h3>
+						<h3  id = "address3" class="heading mt-2"></h3>
+						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+					  </div>
+					</div>
+				  </div>
+				</div>  
+			</div>
+			</div>	       
+		</div>
     </section>
 
     <footer class="ftco-navbar-light img">
