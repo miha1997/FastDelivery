@@ -252,37 +252,48 @@ function mySort(val, region, langugage){
 
 var id = 1;
 
-function addToCart(name, photo, price) {
+function addToCart(name, price) {	
 	var product = {
-		"name" : name,
-		"photo" : photo,
-		"price" : price
+			"name" : name,
+			"price" : price
 	}
 	
-	var jsonString = JSON.stringify(product);
-	
-	if(localStorage.getItem("count") != null) {
-		id = parseInt(localStorage.getItem("count")) + 1;
-		var cnt = localStorage.getItem("count");
-		cnt = parseInt(localStorage.getItem("count")) + 1;
-		localStorage.setItem("count", cnt);
-	}
-	else {
-		localStorage.setItem("count", 1);
-	}
-	
-	localStorage.setItem("prod" + id, jsonString);
-	alert("The product has been added to your cart!");
+	var niz = JSON.parse(localStorage.getItem("niz") || "[]");
+	niz.push(product);
+	localStorage.setItem("niz", JSON.stringify(niz));
 }
 
 function addProduct() {
 	var table = document.getElementById("myTable");
+	var niz = JSON.parse(localStorage.getItem("niz") || "[]");
 	
-	for(var i = 1; i < localStorage.length; i++) {
-		var row = table.insertRow(i + 1);
+	for(var i = 0; i < niz.length; i++) {
+		var row = table.insertRow(i + 2);
 		var cell1 = row.insertCell(0);
 		var cell2 = row.insertCell(1);
-		cell1.innerHTML = 123;
-		cell2.innerHTML = 123;
+		var cell3 = row.insertCell(2);		
+		cell1.innerHTML = niz[i].name;
+		cell2.innerHTML = niz[i].price;
+		cell3.innerHTML = "<input type='button' class='btn btn-danger btn-lg' value='DELETE' onclick='deleteElem(" + i + ")'>";
+	}
+}
+
+function deleteElem(row) {
+	var table = document.getElementById("myTable");
+	var niz = JSON.parse(localStorage.getItem("niz") || "[]");
+	niz.splice(row, 1);
+	for(var i = 0; i < niz.length + 1; i++) {
+		table.deleteRow(i + 2);
+	}
+	
+	localStorage.setItem("niz", JSON.stringify(niz));
+	for(var i = 0; i < niz.length; i++) {
+		var row = table.insertRow(i + 2);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);		
+		cell1.innerHTML = niz[i].name;
+		cell2.innerHTML = niz[i].price;
+		cell3.innerHTML = "<input type='button' class='btn btn-danger btn-lg' value='DELETE' onclick='deleteElem(" + i + ")'>";
 	}
 }
