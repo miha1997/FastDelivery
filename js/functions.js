@@ -260,8 +260,29 @@ function addToCart(name, photo, price) {
 	}
 	
 	var jsonString = JSON.stringify(product);
-	localStorage.setItem("count", id);
-	id = parseInt(localStorage.getItem("count")) + 1;
+	
+	if(localStorage.getItem("count") != null) {
+		id = parseInt(localStorage.getItem("count")) + 1;
+		var cnt = localStorage.getItem("count");
+		cnt = parseInt(localStorage.getItem("count")) + 1;
+		localStorage.setItem("count", cnt);
+	}
+	else {
+		localStorage.setItem("count", 1);
+	}
+	
 	localStorage.setItem("prod" + id, jsonString);
 	alert("The product has been added to your cart!");
+}
+
+function addProduct() {
+	var table = document.getElementById("myTable");
+	
+	for(var i = 1; i < localStorage.length; i++) {
+		var row = table.insertRow(i + 1);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		cell1.innerHTML = 123;
+		cell2.innerHTML = 123;
+	}
 }
