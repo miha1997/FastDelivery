@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Pizza Delicious - Voždovac - Piano Loco</title>
+    <title>Pizza forever - Voždovac - Piano Loco</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -32,7 +32,7 @@
   <body>
   	<nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="index.html"><span class="flaticon-pizza-1 mr-1"></span>Pizza<br><small>Delicious</small></a>
+        <a class="navbar-brand" href="index-en.html"><span class="flaticon-pizza-1 mr-1"></span>Pizza<br><small>forever</small></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="   Toggle navigation">
         <span class="oi oi-menu"></span> Menu
         </button>
@@ -130,7 +130,7 @@
 		              					<h3>VESUVIO</h3>
 		              					<p>ketchup, mozzarella, ham, oregano, olives</p>
 		              					<p class="price"><span>4.90</span></p>
-		              					<p class="btn btn-white btn-outline-white">Add to cart</p>
+		              					<p class="btn btn-white btn-outline-white" onclick="addToCart('VESUVIO', 'vesuvio.png', 4.90);">Add to cart</p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -141,7 +141,7 @@
 		              					<h3>CAPRICCIOSA</h3>
 		              					<p>ketchup, mozzarella, ham, mushrooms, oregano, olives</p>
 		              					<p class="price"><span>$5.90</span></p>
-		              					<p class="btn btn-white btn-outline-white">Add to cart</p>
+		              					<p class="btn btn-white btn-outline-white" onclick="addToCart('CAPRICCIOSA', 'capricciosa.png', 5.90);">Add to cart</p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -152,7 +152,7 @@
 		              					<h3>PEPPERONI</h3>
 		              					<p>ketchup, mozzarella, kulen, pepperoni, oregano, olives</p>
 		              					<p class="price"><span>$5.90</span></p>
-		              					<p class="btn btn-white btn-outline-white">Add to cart</p>
+		              					<p class="btn btn-white btn-outline-white" onclick="addToCart('PEPPERONI', 'pepperoni.png', 5.90);">Add to cart</p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -163,7 +163,7 @@
 		              					<h3>QUATTRO STAGIONI</h3>
 		              					<p>ketchup, mozzarella, ham, kulen, mushrooms, oregano, olives</p>
 		              					<p class="price"><span>$6.90</span></p>
-		              					<p class="btn btn-white btn-outline-white">Add to cart</p>
+		              					<p class="btn btn-white btn-outline-white" onclick="addToCart('QUATTRO STAGIONI', 'quattro_stagioni.png', 6.90);">Add to cart</p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -174,7 +174,7 @@
 		              					<h3>ROMANA</h3>
 		              					<p>ketchup, mozzarella, kulen, bacon, egg, oregano, olives</p>
 		              					<p class="price"><span>$6.90</span></p>
-		              					<p class="btn btn-white btn-outline-white">Add to cart</p>
+		              					<p class="btn btn-white btn-outline-white" onclick="addToCart('ROMANA', 'romana.png', 6.90);">Add to cart</p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -185,7 +185,7 @@
 		              					<h3>VEGATARIANA</h3>
 		              					<p>ketchup, mozzarella, mushrooms, paprika, vegetables, oregano, olives</p>
 		              					<p class="price"><span>$5.90</span></p>
-		              					<p class="btn btn-white btn-outline-white">Add to cart</p>
+		              					<p class="btn btn-white btn-outline-white" onclick="addToCart('VEGATARIANA', 'vegetariana.png', 5.90);">Add to cart</p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -200,7 +200,7 @@
 		              				<div class="text">
 		              					<h3>COCA-COLA</h3>
 		              					<p class="price"><span>$0.90</span></p>
-		              					<p class="btn btn-white btn-outline-white">Add to cart</p>
+		              					<p class="btn btn-white btn-outline-white" onclick="addToCart('COCA-COLA', 'cola.jpg', 0.90);">Add to cart</p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -210,7 +210,7 @@
 		              				<div class="text">
 		              					<h3>FANTA</h3>
 		              					<p class="price"><span>$0.90</span></p>
-		              					<p class="btn btn-white btn-outline-white">Add to cart</p>
+		              					<p class="btn btn-white btn-outline-white" onclick="addToCart('FANTA', 'fanta.jpg', 0.90);">Add to cart</p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -220,7 +220,7 @@
 		              				<div class="text">
 		              					<h3>SODA WATER</h3>  
 		              					<p class="price"><span>$0.50</span></p>
-		              					<p class="btn btn-white btn-outline-white">Add to cart</p>
+		              					<p class="btn btn-white btn-outline-white" onclick="addToCart('SODA WATER', 'knjaz.jpg', 0.50);">Add to cart</p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -230,7 +230,7 @@
 		              				<div class="text">
 		              					<h3>ORANGE JUICE</h3>
 		              					<p class="price"><span>$1.90</span></p>
-		              					<p class="btn btn-white btn-outline-white">Add to cart</p>
+		              					<p class="btn btn-white btn-outline-white" onclick="addToCart('ORANGE JUICE', 'drink-1.jpg', 1.90);">Add to cart</p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -240,7 +240,7 @@
 		              				<div class="text">
 		              					<h3>ICE TEA</h3>
 		              					<p class="price"><span>$1.90</span></p>
-		              					<p class="btn btn-white btn-outline-white">Add to cart</p>
+		              					<p class="btn btn-white btn-outline-white" onclick="addToCart('ICE TEA', 'drink-5.jpg', 1.90);">Add to cart</p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -250,7 +250,7 @@
 		              				<div class="text">
 		              					<h3>LEMONADE JUICE</h3>
 		              					<p class="price"><span>$1.90</span></p>
-		              					<p class="btn btn-white btn-outline-white">Add to cart</p>
+		              					<p class="btn btn-white btn-outline-white" onclick="addToCart('LEMONADE JUICE', 'drink-7.jpg', 1.90);">Add to cart</p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -266,7 +266,7 @@
 		              					<h3>PASTA BOLOGNESE</h3>
 		              					<p>ketchup, mozzarella, meat, tomato sauce</p>
 		              					<p class="price"><span>$5.90</span></p>
-		              					<p class="btn btn-white btn-outline-white">Add to cart</p>
+		              					<p class="btn btn-white btn-outline-white" onclick="addToCart('PASTA BOLOGNESE', 'bolognese.png', 5.90);">Add to cart</p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -277,7 +277,7 @@
 		              					<h3>PASTA MILANESE</h3>
 		              					<p>ketchup, mozzarella, ham, mushrooms, tomato sauce</p>
 		              					<p class="price"><span>$5.90</span></p>
-		              					<p class="btn btn-white btn-outline-white">Add to cart</p>
+		              					<p class="btn btn-white btn-outline-white" onclick="addToCart('PASTA MILANESE', 'milanese.png', 5.90);">Add to cart</p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -288,7 +288,7 @@
 		              					<h3>PASTA CARBONARA</h3>
 		              					<p>ketchup, mozzarella, bacon</p>
 		              					<p class="price"><span>$4.90</span></p>
-		              					<p class="btn btn-white btn-outline-white">Add to cart</p>
+		              					<p class="btn btn-white btn-outline-white" onclick="addToCart('PASTA CARBONARA', 'carbonara.png', 4.90);">Add to cart</p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -299,7 +299,7 @@
 		              					<h3>PASTA FUNGHI</h3>
 		              					<p>mozzarella, mushrooms, tomato sauce</p>
 		              					<p class="price"><span>$3.90</span></p>
-		              					<p class="btn btn-white btn-outline-white">Add to cart</p>
+		              					<p class="btn btn-white btn-outline-white" onclick="addToCart('PASTA FUNGHI, 'funghi.png', 3.90);">Add to cart</p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -310,7 +310,7 @@
 		              					<h3>PASTA EGG</h3>
 		              					<p>mozzarella, eggs, bacon, tomato sauce</p>
 		              					<p class="price"><span>$4.90</span></p>
-		              					<p class="btn btn-white btn-outline-white">Add to cart</p>
+		              					<p class="btn btn-white btn-outline-white" onclick="addToCart('PASTA EGG', 'egg.png', 4.90);">Add to cart</p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -321,7 +321,7 @@
 		              					<h3>PASTA MEXICANA</h3>
 		              					<p>mozzarella, bacon, pepperoni, tomato sauce</p>
 		              					<p class="price"><span>$5.90</span></p>
-		              					<p class="btn btn-white btn-outline-white">Add to cart</p>
+		              					<p class="btn btn-white btn-outline-white" onclick="addToCart('PASTA MEXICANA', 'bacon.png', 5.90);">Add to cart</p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -476,6 +476,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
     
   </body>
 </html>

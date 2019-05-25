@@ -249,3 +249,19 @@ function mySort(val, region, langugage){
 		sortByAddress(region, langugage);
 
 }
+
+var id = 1;
+
+function addToCart(name, photo, price) {
+	var product = {
+		"name" : name,
+		"photo" : photo,
+		"price" : price
+	}
+	
+	var jsonString = JSON.stringify(product);
+	localStorage.setItem("count", id);
+	id = parseInt(localStorage.getItem("count")) + 1;
+	localStorage.setItem("prod" + id, jsonString);
+	alert("The product has been added to your cart!");
+}

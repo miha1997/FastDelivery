@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Pizza Forever - Confirmation of purchase</title>
+    <title>Pizza Forever - My cart</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -91,8 +91,8 @@
 					<div class="col-md-12 ftco-animate">
 						<div class="myBack img d-flex align-items-center" style="background-image: url(images/myback.png);">
 							<div class="col-md-12 slider-text text-center ftco-animate">
-								<h1 class="mb-3 mt-5">CONFIRMATION OF PURCHASE</h1>
-								<p class="myBread"><span class="mr-2"><a href="index-en.html" style="color: #d3cdca;">Home</a></span>/ <span><a href="#" style="color: #d3cdca;">Nesto1</a></span> / <span><a href="#" style="color: #d3cdca;">Nesto2</a></span></p>
+								<h1 class="mb-3 mt-5">MY CART</h1>
+								<p class="myBread"><span class="mr-2"><a href="index-en.html" style="color: #d3cdca;">Home</a></span>/ <span><a href="cart-en.html" style="color: #d3cdca;">My cart</a></span></p>
 							</div>
 						</div>	
 					</div>
@@ -107,38 +107,14 @@
               <form name="mojaForma">
                 <br>
                 <table class="table table-striped">
-                  <th colspan="2"><h2>Confirm your purchase<h2></th>
+                  <th colspan="2"><h2>My cart<h2></th>
 
                   <tr>
-                    <td><h5>First name: </h5></td>
-                    <td><input type="text" name="ime"></td>                    
+                    <td><h4>Product: </h4></td>
+                    <td><h4>Price: </h4></td>  
+					<td><h4>Delete: </h4></td> 					
                   </tr>
 
-                  <tr>
-                    <td><h5>Last name: </h5></td>
-                    <td><input type="text" name="prezime"></td>                    
-                  </tr>
-
-                  <tr>
-                    <td><h5>Phone: </h5></td>
-                    <td><input type="text" name="broj"></td>                    
-                  </tr>
-
-                  <tr>
-                    <td><h5>Email: </h5></td>
-                    <td><input type="text" name="mejl"></td>                    
-                  </tr>
-
-                  <tr>
-                    <td><h5>Address: </h5></td>
-                    <td><input type="text" name="adresa"></td>                    
-                  </tr>
-
-                  <tr>                   
-                    <td colspan="2" align="center">
-                      <input type="button" value="Confirm" class="btn btn-success btn-lg" onclick="potvrdi()">
-                    </td>                    
-                  </tr>
                 </table>
               </form>
             </div>
@@ -159,48 +135,6 @@
         </div>
       </div>
     </footer>
-
-  <script>
-    function potvrdi() {
-      if(document.mojaForma.ime.value != "") {
-        if(document.mojaForma.prezime.value != "") {
-          if(document.mojaForma.broj.value != "") {
-            var regex1 = /^\d{3}\/\d{3}-\d{2}-\d{2}$/;
-            if(regex1.test(document.mojaForma.broj.value)) {
-              if(document.mojaForma.mejl.value != "") {
-                var regex2 = /^\w+(\.\w+)?@\w+(\.\w{2,3})$/;
-                if(regex2.test(document.mojaForma.mejl.value)) {
-                  if(document.mojaForma.adresa.value) {
-                    var regex3 = /^\w+\s+\d+$/;
-                    if(regex3.test(document.mojaForma.adresa.value)) {
-                      if("localStorage" in window && window.localStorage != null) {
-                        localStorage.setItem("ime", document.mojaForma.ime.value);
-                        localStorage.setItem("prezime", document.mojaForma.prezime.value);
-                        localStorage.setItem("broj", document.mojaForma.broj.value);
-                        localStorage.setItem("mejl", document.mojaForma.mejl.value);
-                        localStorage.setItem("adresa", document.mojaForma.adresa.value);
-
-                        alert("Your purchase is confirmed!");
-                      }
-                      else alert("Sorry!");
-                    }
-                    else alert("Address format must be: 'Street 23'!");
-                  }
-                  else alert("Address is required!");
-                }
-                else alert("Email format must be: 'info@domain.com' or 'info.info@domain.com'!");
-              } 
-              else alert("Email is required!");   
-            }
-            else alert("Phone format must be: '123/456-78-90'!");
-          } 
-          else alert("Phone is required!");
-        } 
-        else alert("Last name is required!");
-      }
-      else alert("First name is required!");
-    }  
-  </script>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
