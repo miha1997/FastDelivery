@@ -8599,7 +8599,11 @@ textarea.form-control {
   .blog-entry .text {
     position: relative; }
     .blog-entry .text .heading {
-      font-size: 18px;
+      font-size: 20px;
+      margin-bottom: 16px;
+      font-weight: 400; }
+      .blog-entry .text h3  {
+      font-size: 16px !important;
       margin-bottom: 16px;
       font-weight: 400; }
       .blog-entry .text .heading a {
