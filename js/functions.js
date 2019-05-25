@@ -196,11 +196,6 @@ function defaultSort(region, langugage){
 }
 
 function homeSort(langugage){
-	navs[0].classList.add('active');
-	if(navs[1].classList.contains('active')) navs[1].classList.replace('active', 'disabled');
-	if(navs[2].classList.contains('active')) navs[2].classList.replace('active', 'disabled');
-	if(navs[3].classList.contains('active')) navs[3].classList.replace('active', 'disabled');
-
 	$.getJSON( "base.json", function( json ) {
 		var restaurants = [];
 
@@ -255,18 +250,34 @@ function mySort(val, region, langugage){
 
 }
 
-function bigSort(langugage){
-	var links = document.getElementById('food-type');
-	var navs = links.getElementsByClassName('nav-link');
-
-	var italian = false, traditional = false, american = false;
-
-	if(navs[0].classList.contains('active')) italian = true;
-	if(navs[1].classList.contains('active')) traditional = true;		
-	if(navs[2].classList.contains('active')) american = true;
-
-
+function bigSort(code, langugage){
 	$.getJSON( "base.json", function( json ) {
+		var links = document.getElementById('food-type');
+		var navs = links.getElementsByClassName('nav-link');
+
+		var italian = false, traditional = false, american = false;
+
+		if(code == 1)
+			if (navs[0].classList.contains('active'))
+				navs[0].classList.replace('active', 'disabled');
+			else
+				navs[0].classList.replace('disabled', 'active');
+
+		if(code == 2)
+			if (navs[1].classList.contains('active'))
+				navs[1].classList.replace('active', 'disabled');
+			else
+				navs[1].classList.replace('disabled', 'active');
+
+		if(code == 3)
+			if (navs[2].classList.contains('active'))
+				navs[2].classList.replace('active', 'disabled');
+			else
+				navs[2].classList.replace('disabled', 'active');
+
+		if(navs[0].classList.contains('active')) italian = true;
+		if(navs[1].classList.contains('active')) traditional = true;		
+		if(navs[2].classList.contains('active')) american = true;
 		var restaurants = [];
 
 		for(var i = 0; i < json.restaurants.length; i++)
@@ -275,13 +286,8 @@ function bigSort(langugage){
 
 		links = document.getElementById('sort-type');
 		navs = links.getElementsByClassName('nav-link');
-		var sortType = 0;
-		if(navs[0].classList.contains('active')) sortType = 0;
-		if(navs[1].classList.contains('active')) sortType = 1;
-		if(navs[2].classList.contains('active')) sortType = 2;
-		if(navs[3].classList.contains('active')) sortType = 3;
 
-		if(sortType == 1){
+		if(code == 5){
 			for(var i = 0; i < restaurants.length - 1; i++)
 				for(var j = i + 1; j < restaurants.length; j++)
 					if(restaurants[i].name > restaurants[j].name){
@@ -291,7 +297,7 @@ function bigSort(langugage){
 					}
 		}
 
-		if(sortType == 3){
+		if(code == 7){
 			for(var i = 0; i < restaurants.length - 1; i++)
 				for(var j = i + 1; j < restaurants.length; j++)
 					if(restaurants[i].address > restaurants[j].address){
@@ -301,7 +307,7 @@ function bigSort(langugage){
 					}
 		}
 
-		if(sortType == 2){
+		if(code == 6){
 			for(var i = 0; i < restaurants.length - 1; i++)
 				for(var j = i + 1; j < restaurants.length; j++)
 					if(restaurants[i].rateSum/restaurants[i].rateNum < restaurants[j].rateSum/restaurants[j].rateNum){
@@ -311,10 +317,17 @@ function bigSort(langugage){
 					}
 		}
 
-		if(navs[0].classList.contains('active'))navs[0].classList.replace('active', 'disabled');
-		if(navs[1].classList.contains('active'))navs[1].classList.replace('active', 'disabled');
-		if(navs[2].classList.contains('active'))navs[2].classList.replace('active', 'disabled');
-		if(navs[3].classList.contains('active'))navs[3].classList.replace('active', 'disabled');
+		if(code == 4 || code == 5 || code == 6 || code == 7){
+			if(navs[0].classList.contains('active'))navs[0].classList.replace('active', 'disabled');
+			if(navs[1].classList.contains('active'))navs[1].classList.replace('active', 'disabled');
+			if(navs[2].classList.contains('active'))navs[2].classList.replace('active', 'disabled');
+			if(navs[3].classList.contains('active'))navs[3].classList.replace('active', 'disabled');
+
+			if(code == 4) navs[0].classList.replace('disabled', 'active');
+			if(code == 5) navs[1].classList.replace('disabled', 'active');
+			if(code == 6) navs[2].classList.replace('disabled', 'active');
+			if(code == 7) navs[3].classList.replace('disabled', 'active');
+		}
 
 		var cnt = 0;
 
@@ -343,7 +356,13 @@ function bigSort(langugage){
 		}
 
 		var cnt = restaurants.length - 1;
-		cnt = cnt / 3;
+		cnt = Math.floor( cnt / 3 );
+
+		for(var i = 0; i <= cnt; i++){
+			var toHide = document.getElementById("block" + i);  
+			toHide.style.setProperty('display', 'none');
+
+		}
 
 		for(var i = cnt + 1; i < 5; i++){
 			var toHide = document.getElementById("block" + i);  
@@ -351,7 +370,15 @@ function bigSort(langugage){
 
 		}
 
+		for(var i = 0; i < restaurants.length; i++){
+			var toHide = document.getElementById("cell" + i);  
+			toHide.style.setProperty('display', 'block');
+		}
 
+		for(var i = restaurants.length; i < 15; i++){
+			var toHide = document.getElementById("cell" + i);  
+			toHide.style.setProperty('display', 'none', 'important');
+		}
 	});
 		
 }

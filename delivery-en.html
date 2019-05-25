@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body onload="bigSort('en')">
+  <body onload="bigSort(4, 'en')">
   	<nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light">
       <div class="container">
         <a class="navbar-brand" href="index.html"><span class="flaticon-pizza-1 mr-1"></span>Pizza<br><small>Delicious</small></a>
@@ -114,11 +114,11 @@
               <div id="food-type">
                 &nbsp;
               
-                <a class="nav-link active" onclick="bigSort('en')" data-toggle="pill" href="#">Italian pizza</a>
+                <a class="nav-link active" onclick="bigSort(1, 'en')" data-toggle="pill" href="#">Italian pizza</a>
                 
-                <a class="nav-link active" onclick="bgiSort('en')" data-toggle="pill" href="#">Tradiotional pizza</a>
+                <a class="nav-link active" onclick="bigSort(2, 'en')" data-toggle="pill" href="#">Traditional pizza</a>
                 
-                <a class="nav-link active" onclick="bigSort('en')" data-toggle="pill" href="#">American pizza</a>
+                <a class="nav-link active" onclick="bigSort(3, 'en')" data-toggle="pill" href="#">American pizza</a>
               </div>
             </div>
           </div>
@@ -142,19 +142,19 @@
             <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">             
               <div id="sort-type">
                 &nbsp;
-                <a class="nav-link active" onclick="bigSort('en')" data-toggle="pill" href="#">Default</a>
+                <a class="nav-link active" onclick="bigSort(4, 'en')" data-toggle="pill" href="#">Default</a>
               
-                <a class="nav-link" onclick="bigSort('en')" data-toggle="pill" href="#">Name</a>
+                <a class="nav-link" onclick="bigSort(5, 'en')" data-toggle="pill" href="#">Name</a>
                 
-                <a class="nav-link" onclick="bigSort('en')" data-toggle="pill" href="#">Rating</a>
+                <a class="nav-link" onclick="bigSort(6, 'en')" data-toggle="pill" href="#">Rating</a>
                 
-                <a class="nav-link" onclick="bigSort('en')" data-toggle="pill" href="#">Location</a>
+                <a class="nav-link" onclick="bigSort(7, 'en')" data-toggle="pill" href="#">Location</a>
               </div>
             </div>
           </div>
           <div id="block0" class="col-md-12 d-flex align-items-center">
             <div class="col-md-4 d-flex ftco-animate">
-              <div class="blog-entry align-self-stretch">
+              <div id="cell0" class="blog-entry align-self-stretch">
                 <a id="link1" href="#" class="block-20" style="">
                 </a>
                 <div class="text text-center py-4 d-block">
@@ -165,7 +165,7 @@
               </div>
               </div>
               <div class="col-md-4 d-flex ftco-animate">
-              <div class="blog-entry align-self-stretch">
+              <div id="cell1" class="blog-entry align-self-stretch">
                 <a id='link2' href="#" class="block-20" style="">
                 </a>
                 <div class="text text-center py-4 d-block">
@@ -176,7 +176,7 @@
               </div>
               </div>
               <div class="col-md-4 d-flex ftco-animate">
-              <div class="blog-entry align-self-stretch">
+              <div id="cell2" class="blog-entry align-self-stretch">
 
                 <a id="link3" href="#" class="block-20" style="">
                 </a>
@@ -191,7 +191,7 @@
 
           <div id="block1" class="col-md-12 d-flex align-items-center">
             <div class="col-md-4 d-flex ftco-animate">
-              <div class="blog-entry align-self-stretch">
+              <div id="cell3" class="blog-entry align-self-stretch">
                 <a id="link4" href="#" class="block-20" style="">
                 </a>
                 <div class="text text-center py-4 d-block">
@@ -201,7 +201,7 @@
                 </div>
               </div>
               </div>
-              <div class="col-md-4 d-flex ftco-animate">
+              <div id="cell4" class="col-md-4 d-flex ftco-animate">
               <div class="blog-entry align-self-stretch">
                 <a id='link5' href="#" class="block-20" style="">
                 </a>
@@ -213,7 +213,7 @@
               </div>
               </div>
               <div class="col-md-4 d-flex ftco-animate">
-              <div class="blog-entry align-self-stretch">
+              <div id="cell5" class="blog-entry align-self-stretch">
 
                 <a id="link6" href="#" class="block-20" style="">
                 </a>
@@ -228,7 +228,7 @@
 
           <div id="block2" class="col-md-12 d-flex align-items-center">
             <div class="col-md-4 d-flex ftco-animate">
-              <div class="blog-entry align-self-stretch">
+              <div id="cell6" class="blog-entry align-self-stretch">
                 <a id="link7" href="#" class="block-20" style="">
                 </a>
                 <div class="text text-center py-4 d-block">
@@ -239,7 +239,7 @@
               </div>
               </div>
               <div class="col-md-4 d-flex ftco-animate">
-              <div class="blog-entry align-self-stretch">
+              <div id="cell7" class="blog-entry align-self-stretch">
                 <a id='link8' href="#" class="block-20" style="">
                 </a>
                 <div class="text text-center py-4 d-block">
@@ -250,7 +250,7 @@
               </div>
               </div>
               <div class="col-md-4 d-flex ftco-animate">
-              <div class="blog-entry align-self-stretch">
+              <div id="cell8" class="blog-entry align-self-stretch">
 
                 <a id="link9" href="#" class="block-20" style="">
                 </a>
@@ -265,7 +265,7 @@
 
           <div id="block3" class="col-md-12 d-flex align-items-center">
             <div class="col-md-4 d-flex ftco-animate">
-              <div class="blog-entry align-self-stretch">
+              <div id="cell9" class="blog-entry align-self-stretch">
                 <a id="link10" href="#" class="block-20" style="">
                 </a>
                 <div class="text text-center py-4 d-block">
@@ -276,7 +276,7 @@
               </div>
               </div>
               <div class="col-md-4 d-flex ftco-animate">
-              <div class="blog-entry align-self-stretch">
+              <div id="cell10" class="blog-entry align-self-stretch">
                 <a id='link11' href="#" class="block-20" style="">
                 </a>
                 <div class="text text-center py-4 d-block">
@@ -287,7 +287,7 @@
               </div>
               </div>
               <div class="col-md-4 d-flex ftco-animate">
-              <div class="blog-entry align-self-stretch">
+              <div id="cell11" class="blog-entry align-self-stretch">
 
                 <a id="link12" href="#" class="block-20" style="">
                 </a>
@@ -302,7 +302,7 @@
 
           <div id="block4" class="col-md-12 d-flex align-items-center">
             <div class="col-md-4 d-flex ftco-animate">
-              <div class="blog-entry align-self-stretch">
+              <div id="cell12" class="blog-entry align-self-stretch">
                 <a id="link13" href="#" class="block-20" style="">
                 </a>
                 <div class="text text-center py-4 d-block">
@@ -313,7 +313,7 @@
               </div>
               </div>
               <div class="col-md-4 d-flex ftco-animate">
-              <div class="blog-entry align-self-stretch">
+              <div id="cell13" class="blog-entry align-self-stretch">
                 <a id='link14' href="#" class="block-20" style="">
                 </a>
                 <div class="text text-center py-4 d-block">
@@ -324,7 +324,7 @@
               </div>
               </div>
               <div class="col-md-4 d-flex ftco-animate">
-              <div class="blog-entry align-self-stretch">
+              <div id="cell14" class="blog-entry align-self-stretch">
 
                 <a id="link15" href="#" class="block-20" style="">
                 </a>
