@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body onload="bigSort('en')">
   	<nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light">
       <div class="container">
         <a class="navbar-brand" href="index.html"><span class="flaticon-pizza-1 mr-1"></span>Pizza<br><small>Delicious</small></a>
@@ -84,7 +84,7 @@
       </div>
     </nav>
 
-    <section class="ftco-gallery" style="padding-top: 0em;>
+    <section class="ftco-gallery" style="padding-top: 0em;">
     	<div class="container-wrap">
     		<div class="row no-gutters">
 					<div class="col-md-12 ftco-animate">
@@ -98,28 +98,248 @@
 			</div>
     	</div>
     </section>
-		
-	<section class="ftco-menu">
-		<div class="heading-section text-center ftco-animate">
+	
+    <div class="heading-section text-center ftco-animate">
+            <h2 class="mb-4">Choose type of food:</h2>
+            <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"> 
+            </span></p>
+    </div>
+
+  <section class="ftco-menu">    
+      <div class="container-fluid">
+        <div class="row d-md-flex">           
+          <div class="col-lg-12 ftco-animate p-md-5"> 
+          <div class="col-md-12 nav-link-wrap mb-5">
+            <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">             
+              <div id="food-type">
+                &nbsp;
+              
+                <a class="nav-link active" onclick="bigSort('en')" data-toggle="pill" href="#">Italian pizza</a>
+                
+                <a class="nav-link active" onclick="bgiSort('en')" data-toggle="pill" href="#">Tradiotional pizza</a>
+                
+                <a class="nav-link active" onclick="bigSort('en')" data-toggle="pill" href="#">American pizza</a>
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="heading-section text-center ftco-animate">
             <h2 class="mb-4">Sort restaurants by:</h2>
-            <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
-         </div>
-    	<div class="container-fluid">
-    		<div class="row d-md-flex">	    			
-	    		<div class="col-lg-12 ftco-animate p-md-5">	
-					<div class="col-md-12 nav-link-wrap mb-5">
-						<div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">							
-						  &nbsp;
-						  <a class="nav-link" id="name" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Name</a>
-							
-						  <a class="nav-link" id="location" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Location</a>
-							
-						  <a class="nav-link" id="rating" id="v-pills-4-tab" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-4" aria-selected="false">Rating</a>
-						</div>
-		          </div>			
-		        </div>
-			</div>	       
-		</div>
+            <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"> 
+            </span></p>
+  </div>
+
+	<section class="ftco-menu">    
+      <div class="container-fluid">
+        <div class="row d-md-flex">           
+          <div class="col-lg-12 ftco-animate p-md-5"> 
+          <div class="col-md-12 nav-link-wrap mb-5">
+            <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">             
+              <div id="sort-type">
+                &nbsp;
+                <a class="nav-link active" onclick="bigSort('en')" data-toggle="pill" href="#">Default</a>
+              
+                <a class="nav-link" onclick="bigSort('en')" data-toggle="pill" href="#">Name</a>
+                
+                <a class="nav-link" onclick="bigSort('en')" data-toggle="pill" href="#">Rating</a>
+                
+                <a class="nav-link" onclick="bigSort('en')" data-toggle="pill" href="#">Location</a>
+              </div>
+            </div>
+          </div>
+          <div id="block0" class="col-md-12 d-flex align-items-center">
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+                <a id="link1" href="#" class="block-20" style="">
+                </a>
+                <div class="text text-center py-4 d-block">
+                <h2 class="heading mt-2"><a id="name1" href="#"></a></h2>
+                <h3 id = "rate1" class="heading mt-2"></h3>
+                <h3  id = "address1" class="heading mt-2"></h3>
+                </div>
+              </div>
+              </div>
+              <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+                <a id='link2' href="#" class="block-20" style="">
+                </a>
+                <div class="text text-center py-4 d-block">
+                <h2 class="heading mt-2"><a id="name2" href="#"></a></h2>
+                <h3 id = "rate2" class="heading mt-2"></h3>
+                <h3  id = "address2" class="heading mt-2"></h3>
+                </div>
+              </div>
+              </div>
+              <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+
+                <a id="link3" href="#" class="block-20" style="">
+                </a>
+                <div class="text text-center py-4 d-block">
+                <h2 class="heading mt-2"><a id="name3" href="#"></a></h2>
+                <h3 id = "rate3" class="heading mt-2"></h3>
+                <h3  id = "address3" class="heading mt-2"></h3>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+          <div id="block1" class="col-md-12 d-flex align-items-center">
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+                <a id="link4" href="#" class="block-20" style="">
+                </a>
+                <div class="text text-center py-4 d-block">
+                <h2 class="heading mt-2"><a id="name4" href="#"></a></h2>
+                <h3 id = "rate4" class="heading mt-2"></h3>
+                <h3  id = "address4" class="heading mt-2"></h3>
+                </div>
+              </div>
+              </div>
+              <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+                <a id='link5' href="#" class="block-20" style="">
+                </a>
+                <div class="text text-center py-4 d-block">
+                <h2 class="heading mt-2"><a id="name5" href="#"></a></h2>
+                <h3 id = "rate5" class="heading mt-2"></h3>
+                <h3  id = "address5" class="heading mt-2"></h3>
+                </div>
+              </div>
+              </div>
+              <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+
+                <a id="link6" href="#" class="block-20" style="">
+                </a>
+                <div class="text text-center py-4 d-block">
+                <h2 class="heading mt-2"><a id="name6" href="#"></a></h2>
+                <h3 id = "rate6" class="heading mt-2"></h3>
+                <h3  id = "address6" class="heading mt-2"></h3>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+          <div id="block2" class="col-md-12 d-flex align-items-center">
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+                <a id="link7" href="#" class="block-20" style="">
+                </a>
+                <div class="text text-center py-4 d-block">
+                <h2 class="heading mt-2"><a id="name7" href="#"></a></h2>
+                <h3 id = "rate7" class="heading mt-2"></h3>
+                <h3  id = "address7" class="heading mt-2"></h3>
+                </div>
+              </div>
+              </div>
+              <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+                <a id='link8' href="#" class="block-20" style="">
+                </a>
+                <div class="text text-center py-4 d-block">
+                <h2 class="heading mt-2"><a id="name8" href="#"></a></h2>
+                <h3 id = "rate8" class="heading mt-2"></h3>
+                <h3  id = "address8" class="heading mt-2"></h3>
+                </div>
+              </div>
+              </div>
+              <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+
+                <a id="link9" href="#" class="block-20" style="">
+                </a>
+                <div class="text text-center py-4 d-block">
+                <h2 class="heading mt-2"><a id="name9" href="#"></a></h2>
+                <h3 id = "rate9" class="heading mt-2"></h3>
+                <h3  id = "address9" class="heading mt-2"></h3>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+          <div id="block3" class="col-md-12 d-flex align-items-center">
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+                <a id="link10" href="#" class="block-20" style="">
+                </a>
+                <div class="text text-center py-4 d-block">
+                <h2 class="heading mt-2"><a id="name10" href="#"></a></h2>
+                <h3 id = "rate10" class="heading mt-2"></h3>
+                <h3  id = "address10" class="heading mt-2"></h3>
+                </div>
+              </div>
+              </div>
+              <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+                <a id='link11' href="#" class="block-20" style="">
+                </a>
+                <div class="text text-center py-4 d-block">
+                <h2 class="heading mt-2"><a id="name11" href="#"></a></h2>
+                <h3 id = "rate11" class="heading mt-2"></h3>
+                <h3  id = "address11" class="heading mt-2"></h3>
+                </div>
+              </div>
+              </div>
+              <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+
+                <a id="link12" href="#" class="block-20" style="">
+                </a>
+                <div class="text text-center py-4 d-block">
+                <h2 class="heading mt-2"><a id="name12" href="#"></a></h2>
+                <h3 id = "rate12" class="heading mt-2"></h3>
+                <h3  id = "address12" class="heading mt-2"></h3>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+          <div id="block4" class="col-md-12 d-flex align-items-center">
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+                <a id="link13" href="#" class="block-20" style="">
+                </a>
+                <div class="text text-center py-4 d-block">
+                <h2 class="heading mt-2"><a id="name13" href="#"></a></h2>
+                <h3 id = "rate13" class="heading mt-2"></h3>
+                <h3  id = "address13" class="heading mt-2"></h3>
+                </div>
+              </div>
+              </div>
+              <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+                <a id='link14' href="#" class="block-20" style="">
+                </a>
+                <div class="text text-center py-4 d-block">
+                <h2 class="heading mt-2"><a id="name14" href="#"></a></h2>
+                <h3 id = "rate14" class="heading mt-2"></h3>
+                <h3  id = "address14" class="heading mt-2"></h3>
+                </div>
+              </div>
+              </div>
+              <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+
+                <a id="link15" href="#" class="block-20" style="">
+                </a>
+                <div class="text text-center py-4 d-block">
+                <h2 class="heading mt-2"><a id="name15" href="#"></a></h2>
+                <h3 id = "rate15" class="heading mt-2"></h3>
+                <h3  id = "address15" class="heading mt-2"></h3>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+          </div>
+        </div>
+      </div>
     </section>
 				  
     <footer class="ftco-navbar-light img">
@@ -163,6 +383,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
     
   </body>
 </html>
