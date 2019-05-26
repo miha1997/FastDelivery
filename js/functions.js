@@ -283,7 +283,7 @@ function deleteElem(row) {
 	var niz = JSON.parse(localStorage.getItem("niz") || "[]");
 	niz.splice(row, 1);
 	for(var i = 0; i < niz.length + 1; i++) {
-		table.deleteRow(i + 2);
+		table.deleteRow(2);
 	}
 	
 	localStorage.setItem("niz", JSON.stringify(niz));
