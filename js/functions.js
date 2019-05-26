@@ -250,8 +250,6 @@ function mySort(val, region, langugage){
 
 }
 
-var id = 1;
-
 function addToCart(name, price) {	
 	var product = {
 			"name" : name,
@@ -261,6 +259,13 @@ function addToCart(name, price) {
 	var niz = JSON.parse(localStorage.getItem("niz") || "[]");
 	niz.push(product);
 	localStorage.setItem("niz", JSON.stringify(niz));
+	
+	if(localStorage.getItem("total") == null) {
+		localStorage.setItem("total", 0);
+	}
+	
+	var totalPrice = parseFloat(localStorage.getItem("total")) + price;
+	localStorage.setItem("total", totalPrice);
 	alert("The product has been added to your cart!");
 }
 
@@ -277,6 +282,8 @@ function addProduct() {
 		cell2.innerHTML = niz[i].price;
 		cell3.innerHTML = "<input type='button' class='btn btn-danger btn-lg' value='DELETE' onclick='deleteElem(" + i + ")'>";
 	}
+	
+	document.getElementById("total").innerHTML = localStorage.getItem("total");
 }
 
 function deleteElem(row) {
@@ -287,6 +294,8 @@ function deleteElem(row) {
 		table.deleteRow(2);
 	}
 	
+	localStorage.setItem("total", 0);
+	
 	localStorage.setItem("niz", JSON.stringify(niz));
 	for(var i = 0; i < niz.length; i++) {
 		var row = table.insertRow(i + 2);
@@ -296,7 +305,11 @@ function deleteElem(row) {
 		cell1.innerHTML = niz[i].name;
 		cell2.innerHTML = niz[i].price;
 		cell3.innerHTML = "<input type='button' class='btn btn-danger btn-lg' value='DELETE' onclick='deleteElem(" + i + ")'>";
+		var totalPrice = parseFloat(localStorage.getItem("total")) + niz[i].price;
+		localStorage.setItem("total", totalPrice);
 	}
+	
+	document.getElementById("total").innerHTML = localStorage.getItem("total");
 }
 
 function potvrdi() {
