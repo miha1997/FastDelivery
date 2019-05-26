@@ -92,7 +92,7 @@
 						<div class="myBack img d-flex align-items-center" style="background-image: url(images/myback.png);">
 							<div class="col-md-12 slider-text text-center ftco-animate">
 								<h1 class="mb-3 mt-5">CONFIRMATION OF PURCHASE</h1>
-								<p class="myBread"><span class="mr-2"><a href="index-en.html" style="color: #d3cdca;">Home</a></span>/ <span><a href="#" style="color: #d3cdca;">Nesto1</a></span> / <span><a href="#" style="color: #d3cdca;">Nesto2</a></span></p>
+								<p class="myBread"><span class="mr-2"><a href="index-en.html" style="color: #d3cdca;">Home</a></span>/ <span><a href="mycart-en.html" style="color: #d3cdca;">My cart</a></span> / <span><a href="#" style="color: #d3cdca;">Confirm</a></span></p>
 							</div>
 						</div>	
 					</div>
@@ -160,48 +160,6 @@
       </div>
     </footer>
 
-  <script>
-    function potvrdi() {
-      if(document.mojaForma.ime.value != "") {
-        if(document.mojaForma.prezime.value != "") {
-          if(document.mojaForma.broj.value != "") {
-            var regex1 = /^\d{3}\/\d{3}-\d{2}-\d{2}$/;
-            if(regex1.test(document.mojaForma.broj.value)) {
-              if(document.mojaForma.mejl.value != "") {
-                var regex2 = /^\w+(\.\w+)?@\w+(\.\w{2,3})$/;
-                if(regex2.test(document.mojaForma.mejl.value)) {
-                  if(document.mojaForma.adresa.value) {
-                    var regex3 = /^\w+\s+\d+$/;
-                    if(regex3.test(document.mojaForma.adresa.value)) {
-                      if("localStorage" in window && window.localStorage != null) {
-                        localStorage.setItem("ime", document.mojaForma.ime.value);
-                        localStorage.setItem("prezime", document.mojaForma.prezime.value);
-                        localStorage.setItem("broj", document.mojaForma.broj.value);
-                        localStorage.setItem("mejl", document.mojaForma.mejl.value);
-                        localStorage.setItem("adresa", document.mojaForma.adresa.value);
-
-                        alert("Your purchase is confirmed!");
-                      }
-                      else alert("Sorry!");
-                    }
-                    else alert("Address format must be: 'Street 23'!");
-                  }
-                  else alert("Address is required!");
-                }
-                else alert("Email format must be: 'info@domain.com' or 'info.info@domain.com'!");
-              } 
-              else alert("Email is required!");   
-            }
-            else alert("Phone format must be: '123/456-78-90'!");
-          } 
-          else alert("Phone is required!");
-        } 
-        else alert("Last name is required!");
-      }
-      else alert("First name is required!");
-    }  
-  </script>
-
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -219,6 +177,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
     
   </body>
 </html>

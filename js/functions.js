@@ -261,6 +261,7 @@ function addToCart(name, price) {
 	var niz = JSON.parse(localStorage.getItem("niz") || "[]");
 	niz.push(product);
 	localStorage.setItem("niz", JSON.stringify(niz));
+	alert("The product has been added to your cart!");
 }
 
 function addProduct() {
@@ -295,5 +296,57 @@ function deleteElem(row) {
 		cell1.innerHTML = niz[i].name;
 		cell2.innerHTML = niz[i].price;
 		cell3.innerHTML = "<input type='button' class='btn btn-danger btn-lg' value='DELETE' onclick='deleteElem(" + i + ")'>";
+	}
+}
+
+function potvrdi() {
+      if(document.mojaForma.ime.value != "") {
+        if(document.mojaForma.prezime.value != "") {
+          if(document.mojaForma.broj.value != "") {
+            var regex1 = /^\d{3}\/\d{3}-\d{2}-\d{2}$/;
+            if(regex1.test(document.mojaForma.broj.value)) {
+              if(document.mojaForma.mejl.value != "") {
+                var regex2 = /^\w+(\.\w+)?@\w+(\.\w{2,3})$/;
+                if(regex2.test(document.mojaForma.mejl.value)) {
+                  if(document.mojaForma.adresa.value) {
+                    var regex3 = /^\w+\s+\d+$/;
+                    if(regex3.test(document.mojaForma.adresa.value)) {
+                      if("localStorage" in window && window.localStorage != null) {
+                        localStorage.setItem("ime", document.mojaForma.ime.value);
+                        localStorage.setItem("prezime", document.mojaForma.prezime.value);
+                        localStorage.setItem("broj", document.mojaForma.broj.value);
+                        localStorage.setItem("mejl", document.mojaForma.mejl.value);
+                        localStorage.setItem("adresa", document.mojaForma.adresa.value);
+
+						var sure = confirm("Are you sure?")
+                        if(sure) {
+							alert("Your purchase is confirmed!");
+							localStorage.clear();
+						}
+					  }
+                      else alert("Sorry!");
+                    }
+                    else alert("Address format must be: 'Street 23'!");
+                  }
+                  else alert("Address is required!");
+                }
+                else alert("Email format must be: 'info@domain.com' or 'info.info@domain.com'!");
+              } 
+              else alert("Email is required!");   
+            }
+            else alert("Phone format must be: '123/456-78-90'!");
+          } 
+          else alert("Phone is required!");
+        } 
+        else alert("Last name is required!");
+      }
+      else alert("First name is required!");
+    }
+
+function confirmPurchase() {
+	var sure = confirm("Are you sure?");
+	
+	if(sure) {
+		window.open("confirm-en.html");
 	}
 }
