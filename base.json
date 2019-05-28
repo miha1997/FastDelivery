@@ -8,7 +8,10 @@
 			"rateSum" : 40,
 			"rateNum" : 5,
 			"picture" : "images/pianoloco.jpg",
-			"address" : "Vojvode Stepe 250"
+			"address" : "Vojvode Stepe 250",
+			"italian" :true,
+			"traditional" : false,
+			"american" : true
 		},
 		{
 			"name" : "Big Pizza",
@@ -18,7 +21,10 @@
 			"rateSum" : 30,
 			"rateNum" : 6,
 			"picture" : "images/pianoloco.jpg",
-			"address" : "Vojvode Stepe 252"
+			"address" : "Vojvode Stepe 252",
+			"italian" :true,
+			"traditional" : true,
+			"american" : true
 		},
 		{
 			"name" : "Furuna",
@@ -28,7 +34,10 @@
 			"rateSum" : 42,
 			"rateNum" : 8,
 			"picture" : "images/pianoloco.jpg",
-			"address" : "Vojvode Stepe 251"
+			"address" : "Vojvode Stepe 251",
+			"italian" :true,
+			"traditional" : false,
+			"american" : false
 
 		},
 		{
@@ -39,7 +48,10 @@
 			"rateSum" : 90,
 			"rateNum" : 10,
 			"picture" : "images/pianoloco.jpg",
-			"address" : "Vojvode Stepe 253"
+			"address" : "Vojvode Stepe 253",
+			"italian" :true,
+			"traditional" : false,
+			"american" : false
 
 		}
 

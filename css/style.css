@@ -8598,6 +8598,11 @@ textarea.form-control {
       margin-bottom: 30px; } }
   .blog-entry .text {
     position: relative; }
+
+  .blog-entry{
+    width: 100%;
+
+  }  
     .blog-entry .text .heading {
       font-size: 20px;
       margin-bottom: 16px;
