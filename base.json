@@ -131,6 +131,84 @@
 			"italian" :true,
 			"traditional" : false,
 			"american" : false
+		},
+		{
+			"name" : "BOTAKO",
+			"region" : "Dorcol",
+			"page_sr" : "botako1.html",
+			"page_en" : "botako1-en.html",
+			"rateSum" : 40,
+			"rateNum" : 5,
+			"picture" : "images/botako1.jpg",
+			"address" : "Šantićeva 8",
+			"italian" :true,
+			"traditional" : false,
+			"american" : true
+		},
+		{
+			"name" : "CIAO",
+			"region" : "Dorcol",
+			"page_sr" : "cioa.html",
+			"page_en" : "cioa-en.html",
+			"rateSum" : 30,
+			"rateNum" : 6,
+			"picture" : "images/ciao.png",
+			"address" : "Jevrejska 8",
+			"italian" :true,
+			"traditional" : true,
+			"american" : true
+		},
+		{
+			"name" : "DUOMO",
+			"region" : "Dorcol",
+			"page_sr" : "duomo.html",
+			"page_en" : "duomo-en.html",
+			"rateSum" : 42,
+			"rateNum" : 8,
+			"picture" : "images/duomo.jpg",
+			"address" : "Strahinjića Bana 66",
+			"italian" :true,
+			"traditional" : false,
+			"american" : false
+		},
+		{
+			"name" : "PIZZA BAR",
+			"region" : "Novi Beograd",
+			"page_sr" : "pizzabar1.html",
+			"page_en" : "pizzabar1-en.html",
+			"rateSum" : 40,
+			"rateNum" : 5,
+			"picture" : "images/pizzabar1.jpg",
+			"address" : "Bulevar Mihajla Pupina 165",
+			"italian" :true,
+			"traditional" : false,
+			"american" : true
+		},
+		{
+			"name" : "PORTOFINO",
+			"region" : "Novi Beograd",
+			"page_sr" : "portofino.html",
+			"page_en" : "portofino-en.html",
+			"rateSum" : 30,
+			"rateNum" : 6,
+			"picture" : "images/portofino.jpg",
+			"address" : "Partizanske avijacije 10",
+			"italian" :true,
+			"traditional" : true,
+			"american" : true
+		},
+		{
+			"name" : "ATASE",
+			"region" : "Novi Beograd",
+			"page_sr" : "atase.html",
+			"page_en" : "atase-en.html",
+			"rateSum" : 42,
+			"rateNum" : 8,
+			"picture" : "images/atase.jpg",
+			"address" : "Bulevar Zorana Đinđića 106",
+			"italian" :true,
+			"traditional" : false,
+			"american" : false
 		}
 		
 	]
