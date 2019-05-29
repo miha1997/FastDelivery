@@ -14,26 +14,26 @@
 			"american" : true
 		},
 		{
-			"name" : "Big Pizza",
+			"name" : "BIG PIZZA",
 			"region" : "Vozdovac",
-			"page_sr" : "pianoloco.html",
-			"page_en" : "pianoloco-en.html",
+			"page_sr" : "bigVoz.html",
+			"page_en" : "bigVoz-en.html",
 			"rateSum" : 30,
 			"rateNum" : 6,
-			"picture" : "images/pianoloco.jpg",
+			"picture" : "images/bigpizza.jpg",
 			"address" : "Vojvode Stepe 252",
 			"italian" :true,
 			"traditional" : true,
 			"american" : true
 		},
 		{
-			"name" : "Furuna",
+			"name" : "FURUNA",
 			"region" : "Vozdovac",
-			"page_sr" : "pianoloco.html",
-			"page_en" : "pianoloco-en.html",
+			"page_sr" : "furuna.html",
+			"page_en" : "furuna-en.html",
 			"rateSum" : 42,
 			"rateNum" : 8,
-			"picture" : "images/pianoloco.jpg",
+			"picture" : "images/furuna.jpg",
 			"address" : "Vojvode Stepe 251",
 			"italian" :true,
 			"traditional" : false,
@@ -53,8 +53,85 @@
 			"traditional" : false,
 			"american" : false
 
+		},
+		{
+			"name" : "PIZZA BAR",
+			"region" : "Vracar",
+			"page_sr" : "pizzabar.html",
+			"page_en" : "pizzabar-en.html",
+			"rateSum" : 40,
+			"rateNum" : 5,
+			"picture" : "images/pizzabar.jpg",
+			"address" : "Mutapova 5",
+			"italian" :true,
+			"traditional" : false,
+			"american" : true
+		},
+		{
+			"name" : "BIG PIZZA",
+			"region" : "Vracar",
+			"page_sr" : "bigVra.html",
+			"page_en" : "bigVra-en.html",
+			"rateSum" : 30,
+			"rateNum" : 6,
+			"picture" : "images/bigpizza.jpg",
+			"address" : "Vojvode Stepe 252",
+			"italian" :true,
+			"traditional" : true,
+			"american" : true
+		},
+		{
+			"name" : "BOTAKO",
+			"region" : "Vracar",
+			"page_sr" : "botako.html",
+			"page_en" : "botako-en.html",
+			"rateSum" : 42,
+			"rateNum" : 8,
+			"picture" : "images/botako.jpg",
+			"address" : "Nevesinjska 6",
+			"italian" :true,
+			"traditional" : false,
+			"american" : false
+		},
+		{
+			"name" : "CUOCO",
+			"region" : "Zvezdara",
+			"page_sr" : "cuoco.html",
+			"page_en" : "cuoco-en.html",
+			"rateSum" : 40,
+			"rateNum" : 5,
+			"picture" : "images/cuoco.jpg",
+			"address" : "Bulevar kralja Aleksandra 250",
+			"italian" :true,
+			"traditional" : false,
+			"american" : true
+		},
+		{
+			"name" : "KUĆICA",
+			"region" : "Zvezdara",
+			"page_sr" : "kucica.html",
+			"page_en" : "kucica-en.html",
+			"rateSum" : 30,
+			"rateNum" : 6,
+			"picture" : "images/kucica.jpg",
+			"address" : "Batutova 11",
+			"italian" :true,
+			"traditional" : true,
+			"american" : true
+		},
+		{
+			"name" : "ZVEZDARA TEATAR",
+			"region" : "Zvezdara",
+			"page_sr" : "teatar.html",
+			"page_en" : "teatar-en.html",
+			"rateSum" : 42,
+			"rateNum" : 8,
+			"picture" : "images/teatar.jpg",
+			"address" : "Milana Rakića 38",
+			"italian" :true,
+			"traditional" : false,
+			"american" : false
 		}
-
+		
 	]
-	
 }
