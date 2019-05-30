@@ -1,11 +1,11 @@
 
 function sortByName(region, langugage){
-	$.getJSON( "base.json", function( json ) {
+		var baseRestaurants = JSON.parse(localStorage.getItem("restaurants"));
 		var restaurants = [];
 
-		for(var i = 0; i < json.restaurants.length; i++)
-			if(json.restaurants[i].region == region)
-				restaurants.push(json.restaurants[i]);
+		for(var i = 0; i < baseRestaurants.length; i++)
+			if(baseRestaurants[i].region == region)
+				restaurants.push(baseRestaurants[i]);
 
 		for(var i = 0; i < restaurants.length - 1; i++)
 			for(var j = i + 1; j < restaurants.length; j++)
@@ -30,12 +30,14 @@ function sortByName(region, langugage){
 			else
 				document.getElementById('name' + index).href =restaurants[i].page_sr;
 
+			var num = restaurants[i].rateSum/restaurants[i].rateNum;
+
 			if(langugage == 'en'){
-				document.getElementById('rate' + index).innerHTML= 'Rate: ' + restaurants[i].rateSum/restaurants[i].rateNum;
+				document.getElementById('rate' + index).innerHTML= 'Rate: ' + num.toFixed(2);
 				document.getElementById('address' + index).innerHTML= 'Address: ' + restaurants[i].address;
 			}
 			else{
-				document.getElementById('rate' + index).innerHTML= 'Ocena: ' + restaurants[i].rateSum/restaurants[i].rateNum;
+				document.getElementById('rate' + index).innerHTML= 'Ocena: ' + num.toFixed(2);
 				document.getElementById('address' + index).innerHTML= 'Adresa: ' + restaurants[i].address;
 			}
 			
@@ -46,17 +48,17 @@ function sortByName(region, langugage){
 				document.getElementById('link' + index).href =restaurants[i].page_sr;
 
 		}
-	});
+	
 
 }
 
 function sortByAddress(region, langugage){
-	$.getJSON( "base.json", function( json ) {
+		var baseRestaurants = JSON.parse(localStorage.getItem("restaurants"));
 		var restaurants = [];
 
-		for(var i = 0; i < json.restaurants.length; i++)
-			if(json.restaurants[i].region == region)
-				restaurants.push(json.restaurants[i]);
+		for(var i = 0; i < baseRestaurants.length; i++)
+			if(baseRestaurants[i].region == region)
+				restaurants.push(baseRestaurants[i]);
 
 		for(var i = 0; i < restaurants.length - 1; i++)
 			for(var j = i + 1; j < restaurants.length; j++)
@@ -81,12 +83,14 @@ function sortByAddress(region, langugage){
 			else
 				document.getElementById('name' + index).href =restaurants[i].page_sr;
 
+			var num = restaurants[i].rateSum/restaurants[i].rateNum;
+
 			if(langugage == 'en'){
-				document.getElementById('rate' + index).innerHTML= 'Rate: ' + restaurants[i].rateSum/restaurants[i].rateNum;
+				document.getElementById('rate' + index).innerHTML= 'Rate: ' + num.toFixed(2);
 				document.getElementById('address' + index).innerHTML= 'Address: ' + restaurants[i].address;
 			}
 			else{
-				document.getElementById('rate' + index).innerHTML= 'Ocena: ' + restaurants[i].rateSum/restaurants[i].rateNum;
+				document.getElementById('rate' + index).innerHTML= 'Ocena: ' + num.toFixed(2);
 				document.getElementById('address' + index).innerHTML= 'Adresa: ' + restaurants[i].address;
 			}
 			
@@ -97,17 +101,17 @@ function sortByAddress(region, langugage){
 				document.getElementById('link' + index).href =restaurants[i].page_sr;
 
 		}
-	});
+	
 
 }
 
 function sortByRate(region, langugage){
-	$.getJSON( "base.json", function( json ) {
+		var baseRestaurants = JSON.parse(localStorage.getItem("restaurants"));
 		var restaurants = [];
 
-		for(var i = 0; i < json.restaurants.length; i++)
-			if(json.restaurants[i].region == region)
-				restaurants.push(json.restaurants[i]);
+		for(var i = 0; i < baseRestaurants.length; i++)
+			if(baseRestaurants[i].region == region)
+				restaurants.push(baseRestaurants[i]);
 
 		for(var i = 0; i < restaurants.length - 1; i++)
 			for(var j = i + 1; j < restaurants.length; j++)
@@ -132,12 +136,14 @@ function sortByRate(region, langugage){
 			else
 				document.getElementById('name' + index).href =restaurants[i].page_sr;
 
+			var num = restaurants[i].rateSum/restaurants[i].rateNum;
+
 			if(langugage == 'en'){
-				document.getElementById('rate' + index).innerHTML= 'Rate: ' + restaurants[i].rateSum/restaurants[i].rateNum;
+				document.getElementById('rate' + index).innerHTML= 'Rate: ' + num.toFixed(2);
 				document.getElementById('address' + index).innerHTML= 'Address: ' + restaurants[i].address;
 			}
 			else{
-				document.getElementById('rate' + index).innerHTML= 'Ocena: ' + restaurants[i].rateSum/restaurants[i].rateNum;
+				document.getElementById('rate' + index).innerHTML= 'Ocena: ' + num.toFixed(2);
 				document.getElementById('address' + index).innerHTML= 'Adresa: ' + restaurants[i].address;
 			}
 			
@@ -148,17 +154,16 @@ function sortByRate(region, langugage){
 				document.getElementById('link' + index).href =restaurants[i].page_sr;
 
 		}
-	});
 
 }
 
 function defaultSort(region, langugage){
-	$.getJSON( "base.json", function( json ) {
+		var baseRestaurants = JSON.parse(localStorage.getItem("restaurants"));
 		var restaurants = [];
 
-		for(var i = 0; i < json.restaurants.length; i++)
-			if(json.restaurants[i].region == region)
-				restaurants.push(json.restaurants[i]);
+		for(var i = 0; i < baseRestaurants.length; i++)
+			if(baseRestaurants[i].region == region)
+				restaurants.push(baseRestaurants[i]);
 
 		var links = document.getElementById('myform');
 		var navs = links.getElementsByClassName('nav-link');
@@ -175,12 +180,14 @@ function defaultSort(region, langugage){
 			else
 				document.getElementById('name' + index).href =restaurants[i].page_sr;
 
+			var num = restaurants[i].rateSum/restaurants[i].rateNum;
+
 			if(langugage == 'en'){
-				document.getElementById('rate' + index).innerHTML= 'Rate: ' + restaurants[i].rateSum/restaurants[i].rateNum;
+				document.getElementById('rate' + index).innerHTML= 'Rate: ' + num.toFixed(2);
 				document.getElementById('address' + index).innerHTML= 'Address: ' + restaurants[i].address;
 			}
 			else{
-				document.getElementById('rate' + index).innerHTML= 'Ocena: ' + restaurants[i].rateSum/restaurants[i].rateNum;
+				document.getElementById('rate' + index).innerHTML= 'Ocena: ' + num.toFixed(2);
 				document.getElementById('address' + index).innerHTML= 'Adresa: ' + restaurants[i].address;
 			}
 			
@@ -191,16 +198,15 @@ function defaultSort(region, langugage){
 				document.getElementById('link' + index).href =restaurants[i].page_sr;
 
 		}
-	});
 
 }
 
 function homeSort(langugage){
-	$.getJSON( "base.json", function( json ) {
+		var baseRestaurants = JSON.parse(localStorage.getItem("restaurants"));
 		var restaurants = [];
 
-		for(var i = 0; i < json.restaurants.length; i++)
-				restaurants.push(json.restaurants[i]);
+		for(var i = 0; i < baseRestaurants.length; i++)
+				restaurants.push(baseRestaurants[i]);
 
 		for(var i = 0; i < restaurants.length - 1; i++)
 			for(var j = i + 1; j < restaurants.length; j++)
@@ -218,12 +224,14 @@ function homeSort(langugage){
 			else
 				document.getElementById('name' + index).href =restaurants[i].page_sr;
 			
+			var num = restaurants[i].rateSum/restaurants[i].rateNum;
+
 			if(langugage == 'en'){
-				document.getElementById('rate' + index).innerHTML= 'Rate: ' + restaurants[i].rateSum/restaurants[i].rateNum;
+				document.getElementById('rate' + index).innerHTML= 'Rate: ' + num.toFixed(2);
 				document.getElementById('address' + index).innerHTML= 'Address: ' + restaurants[i].address;
 			}
 			else{
-				document.getElementById('rate' + index).innerHTML= 'Ocena: ' + restaurants[i].rateSum/restaurants[i].rateNum;
+				document.getElementById('rate' + index).innerHTML= 'Ocena: ' + num.toFixed(2);
 				document.getElementById('address' + index).innerHTML= 'Adresa: ' + restaurants[i].address;
 			}
 
@@ -234,7 +242,6 @@ function homeSort(langugage){
 				document.getElementById('link' + index).href =restaurants[i].page_sr;
 
 		}
-	});
 
 }
 
@@ -250,8 +257,21 @@ function mySort(val, region, langugage){
 
 }
 
+function loadBase(){
+	if(localStorage.getItem("restaurants") == null){
+		$.getJSON( "base.json", function( json ) {
+			var restaurants = [];
+
+			for(var i = 0; i < json.restaurants.length; i++)
+					restaurants.push(json.restaurants[i]);
+
+			localStorage.setItem("restaurants", JSON.stringify(restaurants));
+		});
+	}
+}
+
 function bigSort(code, langugage){
-	$.getJSON( "base.json", function( json ) {
+		var baseRestaurants = JSON.parse(localStorage.getItem("restaurants"));
 		var links = document.getElementById('food-type');
 		var navs = links.getElementsByClassName('nav-link');
 
@@ -280,9 +300,9 @@ function bigSort(code, langugage){
 		if(navs[2].classList.contains('active')) american = true;
 		var restaurants = [];
 
-		for(var i = 0; i < json.restaurants.length; i++)
-			if((json.restaurants[i].italian && italian) || (json.restaurants[i].traditional && traditional) || (json.restaurants[i].american && american))
-				restaurants.push(json.restaurants[i]);
+		for(var i = 0; i < baseRestaurants.length; i++)
+			if((baseRestaurants[i].italian && italian) || (baseRestaurants[i].traditional && traditional) || (baseRestaurants[i].american && american))
+				restaurants.push(baseRestaurants[i]);
 
 		links = document.getElementById('sort-type');
 		navs = links.getElementsByClassName('nav-link');
@@ -338,13 +358,13 @@ function bigSort(code, langugage){
 				document.getElementById('name' + index).href = restaurants[i].page_en;
 			else
 				document.getElementById('name' + index).href =restaurants[i].page_sr;
-			
+			var num = restaurants[i].rateSum/restaurants[i].rateNum;
 			if(langugage == 'en'){
-				document.getElementById('rate' + index).innerHTML= 'Rate: ' + restaurants[i].rateSum/restaurants[i].rateNum;
+				document.getElementById('rate' + index).innerHTML= 'Rate: ' + num.toFixed(2);
 				document.getElementById('address' + index).innerHTML= 'Address: ' + restaurants[i].address;
 			}
 			else{
-				document.getElementById('rate' + index).innerHTML= 'Ocena: ' + restaurants[i].rateSum/restaurants[i].rateNum;
+				document.getElementById('rate' + index).innerHTML= 'Ocena: ' + num.toFixed(2);
 				document.getElementById('address' + index).innerHTML= 'Adresa: ' + restaurants[i].address;
 			}
 
@@ -379,7 +399,7 @@ function bigSort(code, langugage){
 			var toHide = document.getElementById("cell" + i);  
 			toHide.style.setProperty('display', 'none', 'important');
 		}
-	});	
+	
 }
 
 function addToCart(name, price) {	
@@ -502,16 +522,78 @@ function confirmPurchase() {
 	}
 }
 
-function rateRestaurant(name, rating) {
-	$.getJSON("base.json", function(json) {
-		for(var i = 0; i < json.restaurants.length; i++)
-			if(json.restaurants[i].name == name) {
-				json.restaurants[i].rateSum += json.restaurants[i].rateSum + rating;
-				json.restaurants[i].rateNum += json.restaurants[i].rateNum + 1;
-				var toHide = document.getElementById("rating");  
-				toHide.style.setProperty('display', 'none');
+function rateRestaurant(name, rating, langugage) {	
+	var restaurants = JSON.parse(localStorage.getItem("restaurants"));
+	
+	for(var i = 0; i < restaurants.length; i++)
+		if(restaurants[i].name == name) {
+			restaurants[i].rateSum += rating;
+			restaurants[i].rateNum +=  1;
+			var toHide = document.getElementById("rating");  
+			toHide.style.setProperty('display', 'none');
+			if(langugage == 'en')
 				alert("You rated " + name + " with " + rating + "!");
-				//break;
-			}
-	});
+			else
+				alert("Ocenili ste restoran " + name + " sa ocenom " + rating + "!");
+
+			sessionStorage.setItem(name, true);
+
+		}
+
+	localStorage.setItem("restaurants", JSON.stringify(restaurants));
+}
+
+function colorStar(ind){
+	var links = document.getElementById('myform');
+	var navs = links.getElementsByClassName('nav-link');
+
+	for(var i = 0; i < ind; i++){
+		if(navs[i].classList.contains('disabled'))
+			navs[i].classList.replace('disabled', 'active');
+	}
+
+}
+
+function deleteStar(ind){
+	var links = document.getElementById('myform');
+	var navs = links.getElementsByClassName('nav-link');
+
+	for(var i = 0; i < ind; i++){
+		if(navs[i].classList.contains('active'))
+			navs[i].classList.replace( 'active', 'disabled');
+	}
+
+}
+
+function checkRate(name){
+	if(sessionStorage.getItem(name) != null){
+		var toHide = document.getElementById("rating");  
+		toHide.style.setProperty('display', 'none');
+	}
+
+}
+
+function createReceipt(langugage){
+	if(langugage == 'en'){
+		window.open('receipt-en.html');
+		window.close('receipt-en.html');
+	}
+
+}
+
+function addProductReceipt() {
+	var table = document.getElementById("myTable");
+	var niz = JSON.parse(localStorage.getItem("niz") || "[]");
+	
+	for(var i = 0; i < niz.length; i++) {
+		var row = table.insertRow(i + 2);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+				
+		cell1.innerHTML = niz[i].name;
+		cell2.innerHTML = niz[i].price;
+		
+	}
+	
+	document.getElementById("total").innerHTML = 'Sum ' + localStorage.getItem("total");
 }

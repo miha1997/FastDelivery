@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
 
-  <body>
+  <body onload="checkRate('PIANO LOCO'); loadBase()">
   	<nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light">
       <div class="container">
         <a class="navbar-brand" href="index-en.html"><span class="flaticon-pizza-1 mr-1"></span>Pizza<br><small>forever</small></a>
@@ -473,15 +473,17 @@
 					<div class="col-md-12 nav-link-wrap mb-3 ">
 						<div class="nav ftco-animate nav-pills justify-content-center" role="tablist" aria-orientation="vertical">							
 						  &nbsp;
-						  <a class="nav-link" data-toggle="pill" href="#v-pills-1" role="tab" onclick="rateRestaurant('PIANO LOCO', 1);"><font size="5"> &#9734</font></a>
-							
-						  <a class="nav-link" data-toggle="pill" href="#v-pills-2" role="tab" onclick="rateRestaurant('PIANO LOCO', 2);"><font size="5"> &#9734</font></a>
-							
-						  <a class="nav-link" data-toggle="pill" href="#v-pills-3" role="tab" onclick="rateRestaurant('PIANO LOCO', 3);"><font size="5"> &#9734</font></a>
-						  
-						  <a class="nav-link" data-toggle="pill" href="#v-pills-4" role="tab" onclick="rateRestaurant('PIANO LOCO', 4);"><font size="5"> &#9734</font></a>
-						 
-						  <a class="nav-link" data-toggle="pill" href="#v-pills-5" role="tab" onclick="rateRestaurant('PIANO LOCO', 5);"><font size="5"> &#9734</font></a>
+						  <div id="myform">
+							  <a id="1" class="nav-link disabled" data-toggle="pill" href="#v-pills-1" role="tab" onclick="rateRestaurant('PIANO LOCO', 1, 'en');" onmouseenter="colorStar(1)" onmouseleave="deleteStar(1)"><font size="5"> &#9734</font></a>
+								
+							  <a id="2" class="nav-link disabled" data-toggle="pill" href="#v-pills-2" role="tab" onclick="rateRestaurant('PIANO LOCO', 2, 'en');" onmouseenter="colorStar(2)" onmouseleave="deleteStar(2)" ><font size="5"> &#9734</font></a>
+								
+							  <a id="3" class="nav-link disabled" data-toggle="pill" href="#v-pills-3" role="tab" onclick="rateRestaurant('PIANO LOCO', 3, 'en');" onmouseenter="colorStar(3)" onmouseleave="deleteStar(3)"><font size="5"> &#9734</font></a>
+							  
+							  <a id="4" class="nav-link disabled" data-toggle="pill" href="#v-pills-4" role="tab" onclick="rateRestaurant('PIANO LOCO', 4, 'en');" onmouseenter="colorStar(4)" onmouseleave="deleteStar(4)"><font size="5"> &#9734</font></a>
+							 
+							  <a id="5" class="nav-link disabled" data-toggle="pill" href="#v-pills-5" role="tab" onclick="rateRestaurant('PIANO LOCO', 5, 'en');" onmouseenter="colorStar(5)" onmouseleave="deleteStar(5)"><font size="5"> &#9734</font></a>
+						</div>
 						</div>
 		          </div>				       
 				</div>
