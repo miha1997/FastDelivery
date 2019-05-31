@@ -4,30 +4,28 @@
 	<title></title>
 
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
-<body onload="addProductReceipt(); HTMLtoPDF()">
+<body onload=" HTMLtoPDF()">
 	<div id="HTMLtoPDF">
 		<center>
-		<table class="table table-striped" id="myTable">
-			<th colspan="2"><h2>Receipt<h2></th>
-	        <tr>
-	            <td><h4>Product: </h4></td>
-	            <td><h4>Price: </h4></td>
-	        </tr> 
-
-		</table>
-		<div id='total'>
-			
-		</div>
-	</center>
+			<table id="myTable">
+				<tr>
+					<td colspan="2"><h2>Receipt<h2></td>
+				</tr>
+		        <tr>
+		            <td><h4>Product: </h4></td>
+		            <td><h4>Price: </h4></td>
+		        </tr>   
+			</table>
+			<p id='total'>
+				
+			</p>
+		</center>
 	</div>
 
-	<script src="jsss/jspdf.js"></script>
-	<script src="jsss/jquery-2.1.3.js"></script>
-	<script src="jsss/pdfFromHTML.js"></script>
-	
-	
+	<script src="js/jspdf.js"></script>
+	<script src="js/jquery-2.1.3.js"></script>
+	<script src="js/pdfFromHTML.js"></script>
   	<script type="text/javascript" src="js/functions.js"></script> 
 </body>
 </html>

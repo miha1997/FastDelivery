@@ -440,7 +440,8 @@ function addProduct(language) {
 		}
 	}
 	
-	document.getElementById("total").innerHTML = localStorage.getItem("total");
+	var num = parseFloat(localStorage.getItem("total"));
+	document.getElementById("total").innerHTML = 'Sum ' + num.toFixed(2);
 }
 
 function deleteElem(row) {
@@ -466,7 +467,8 @@ function deleteElem(row) {
 		localStorage.setItem("total", totalPrice);
 	}
 	
-	document.getElementById("total").innerHTML = localStorage.getItem("total");
+	var num = parseFloat(localStorage.getItem("total"));
+	document.getElementById("total").innerHTML = 'Sum ' + num.toFixed(2);
 }
 
 function potvrdi(language) {
@@ -636,5 +638,6 @@ function addProductReceipt() {
 		
 	}
 	
-	document.getElementById("total").innerHTML = 'Sum ' + localStorage.getItem("total");
+	var num = parseFloat(localStorage.getItem("total"));
+	document.getElementById("total").innerHTML = 'Sum ' + num.toFixed(2);
 }
