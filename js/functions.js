@@ -421,7 +421,7 @@ function addToCart(name, price) {
 	alert("The product has been added to your cart!");
 }
 
-function addProduct() {
+function addProduct(language) {
 	var table = document.getElementById("myTable");
 	var niz = JSON.parse(localStorage.getItem("niz") || "[]");
 	
@@ -432,7 +432,12 @@ function addProduct() {
 		var cell3 = row.insertCell(2);		
 		cell1.innerHTML = niz[i].name;
 		cell2.innerHTML = niz[i].price;
-		cell3.innerHTML = "<input type='button' class='btn btn-danger btn-lg' value='DELETE' onclick='deleteElem(" + i + ")'>";
+		if(language == "en") {
+			cell3.innerHTML = "<input type='button' class='btn btn-danger btn-lg' value='DELETE' onclick='deleteElem(" + i + ")'>";
+		}
+		else {
+			cell3.innerHTML = "<input type='button' class='btn btn-danger btn-lg' value='OBRIŠI' onclick='deleteElem(" + i + ")'>";
+		}
 	}
 	
 	document.getElementById("total").innerHTML = localStorage.getItem("total");
@@ -464,7 +469,7 @@ function deleteElem(row) {
 	document.getElementById("total").innerHTML = localStorage.getItem("total");
 }
 
-function potvrdi() {
+function potvrdi(language) {
       if(document.mojaForma.ime.value != "") {
         if(document.mojaForma.prezime.value != "") {
           if(document.mojaForma.broj.value != "") {
@@ -482,45 +487,80 @@ function potvrdi() {
                         localStorage.setItem("broj", document.mojaForma.broj.value);
                         localStorage.setItem("mejl", document.mojaForma.mejl.value);
                         localStorage.setItem("adresa", document.mojaForma.adresa.value);
-
-						var sure = confirm("Are you sure?")
-                        if(sure) {
-							alert("Your purchase is confirmed!");
-							localStorage.clear();
-							window.close();
+						if(language == 'en') {
+							var sure = confirm("Are you sure?")
+							if(sure) {
+								alert("Your purchase is confirmed!");
+								localStorage.clear(); 
+								window.close();
+								//tabela se isprazni nakon refresh-a, ali ostaje "puna"
+							}
+						}
+						else {
+							var sure = confirm("Da li ste sigurni?")
+							if(sure) {
+								alert("Vaša kupovina je potvrđena!");
+								localStorage.clear(); 
+								window.close();
+								//tabela se isprazni nakon refresh-a, ali ostaje "puna"
+							}
 						}
 					  }
-                      else alert("Sorry!");
+                      else if(language == "en") alert("Error!");
+						else alert("Greska!");
                     }
-                    else alert("Address format must be: 'Street 23'!");
+                    else if(language == "en") alert("Address format must be: 'Street 23'!");
+						else alert("Adresa mora da bude ovog formata: 'Ulica 23'!");
                   }
-                  else alert("Address is required!");
+                  else if(language == "en") alert("Address is required!");
+					else alert("Unesite adresu!");
                 }
-                else alert("Email format must be: 'info@domain.com' or 'info.info@domain.com'!");
+                else if(language == "en") alert("Email format must be: 'info@domain.com' or 'info.info@domain.com'!");
+					else alert("Mejl mora da bude ovog formata: 'info@domain.com' ili 'info.info@domain.com'!")
               } 
-              else alert("Email is required!");   
+              else if(language == "en") alert("Email is required!");   
+				else alert("Unesite mejl!");
             }
-            else alert("Phone format must be: '123/456-78-90'!");
+            else if(language == "en") alert("Phone format must be: '123/456-78-90'!");
+				else alert("Telefon mora da bude ovog formata: '123/456-78-90'!");
           } 
-          else alert("Phone is required!");
+          else if(language == "en") alert("Phone is required!");
+			else alert("Unesite telefon!");
         } 
-        else alert("Last name is required!");
+        else if(language == "en") alert("Last name is required!");
+			else alert("Unesite prezime!");
       }
-      else alert("First name is required!");
+      else if(language == "en") alert("First name is required!");
+		else alert("Unesite ime!");
     }
 
-function confirmPurchase() {
-	if(localStorage.getItem("total") != 0 && localStorage.getItem("total") != null) {
-		var sure = confirm("Are you sure?");
-		
-		if(sure) {
-			window.open("confirm-en.html");
+function confirmPurchase(language) {
+	if(language == "en") {
+		if(localStorage.getItem("total") != 0 && localStorage.getItem("total") != null) {
+			var sure = confirm("Are you sure?");
+			
+			if(sure) {
+				window.open("confirm-en.html");
+			}
+		}
+		else {
+			alert("Your cart is empty!");
 		}
 	}
 	else {
-		alert("Your cart is empty!");
+		if(localStorage.getItem("total") != 0 && localStorage.getItem("total") != null) {
+			var sure = confirm("Da li ste sigurni?");
+			
+			if(sure) {
+				window.open("confirm.html");
+			}
+		}
+		else {
+			alert("Vaša korpa je prazna!");
+		}
 	}
 }
+
 
 function rateRestaurant(name, rating, langugage) {	
 	var restaurants = JSON.parse(localStorage.getItem("restaurants"));
@@ -532,6 +572,7 @@ function rateRestaurant(name, rating, langugage) {
 			var toHide = document.getElementById("rating");  
 			toHide.style.setProperty('display', 'none');
 			if(langugage == 'en')
+
 				alert("You rated " + name + " with " + rating + "!");
 			else
 				alert("Ocenili ste restoran " + name + " sa ocenom " + rating + "!");
