@@ -135,8 +135,8 @@
 		{
 			"name" : "CIAO",
 			"region" : "Dorcol",
-			"page_sr" : "cioa.html",
-			"page_en" : "cioa-en.html",
+			"page_sr" : "ciao.html",
+			"page_en" : "ciao-en.html",
 			"rateSum" : 30,
 			"rateNum" : 6,
 			"picture" : "images/ciao.png",
