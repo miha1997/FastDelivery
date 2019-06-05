@@ -444,6 +444,8 @@ function addProduct(language) {
 	}
 	
 	var num = parseFloat(localStorage.getItem("total"));
+	if(localStorage.getItem('total') == null)
+		num = 0;
 	document.getElementById("total").innerHTML = 'Sum ' + num.toFixed(2);
 }
 
@@ -619,19 +621,29 @@ function checkRate(name){
 }
 
 function createReceipt(langugage){
-	if(langugage == 'en'){
-		window.open('receipt-en.html');
-		window.close('receipt-en.html');
-	}
-
-}
-
-function addProductReceipt() {
-	var table = document.getElementById("myTable");
 	var niz = JSON.parse(localStorage.getItem("niz") || "[]");
 	
+	if(niz.length == 0){
+		if(langugage != 'en')
+			alert('Niste ništa poručili!');
+		else
+			alert("Nothing was ordered!");
+
+		return;
+	}
+
+	if(langugage == 'en')
+		window.open('receipt-en.html');
+	else
+		window.open('receipt.html');
+}
+
+function addProductReceipt(langugage) {
+	var table = document.getElementById("myTable");
+	var niz = JSON.parse(localStorage.getItem("niz") || "[]");
+
 	for(var i = 0; i < niz.length; i++) {
-		var row = table.insertRow(i + 2);
+		var row = table.insertRow(i + 1);
 		var cell1 = row.insertCell(0);
 		var cell2 = row.insertCell(1);
 				
@@ -641,5 +653,19 @@ function addProductReceipt() {
 	}
 	
 	var num = parseFloat(localStorage.getItem("total"));
-	document.getElementById("total").innerHTML = 'Sum ' + num.toFixed(2);
+
+	if(langugage == 'en')
+		document.getElementById("total").innerHTML = 'Sum ' + num.toFixed(2);
+	else
+		document.getElementById("total").innerHTML = 'Ukupno ' + num.toFixed(2);
+
+	HTMLtoPDF();
+}
+
+function closeWindow(){
+
+	setTimeout(function(){
+    	window.close();
+	}, 100);
+	
 }

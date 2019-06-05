@@ -24,5 +24,6 @@ pdf.fromHTML(
   	  //          this allow the insertion of new lines after html
         pdf.save('html2pdf.pdf');
       }
-  )		
+  )	
+
 }

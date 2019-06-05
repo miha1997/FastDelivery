@@ -5,21 +5,19 @@
 
 	<meta charset="utf-8">
 </head>
-<body onload=" HTMLtoPDF()">
+<body onload=" addProductReceipt('en'); closeWindow()">
 	<div id="HTMLtoPDF">
 		<center>
+			<h1>Receipt</h1>
 			<table id="myTable">
-				<tr>
-					<td colspan="2"><h2>Receipt<h2></td>
-				</tr>
 		        <tr>
-		            <td><h4>Product: </h4></td>
-		            <td><h4>Price: </h4></td>
+		            <th>Product: </th>
+		            <th>Price: </th>
 		        </tr>   
 			</table>
-			<p id='total'>
+			<h3><p id='total'>
 				
-			</p>
+			</p></h3>
 		</center>
 	</div>
 
