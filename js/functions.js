@@ -402,7 +402,7 @@ function bigSort(code, langugage){
 	
 }
 
-function addToCart(name, price) {	
+function addToCart(name, price, language) {	
 	var product = {
 			"name" : name,
 			"price" : price
@@ -418,7 +418,10 @@ function addToCart(name, price) {
 	
 	var totalPrice = parseFloat(localStorage.getItem("total")) + price;
 	localStorage.setItem("total", totalPrice);
-	alert("The product has been added to your cart!");
+	if(language == "en") 
+		alert("The product has been added to your cart!");
+	else 
+		alert("Proizvod je dodat u vašu korpu!");
 }
 
 function addProduct(language) {
@@ -574,7 +577,6 @@ function rateRestaurant(name, rating, langugage) {
 			var toHide = document.getElementById("rating");  
 			toHide.style.setProperty('display', 'none');
 			if(langugage == 'en')
-
 				alert("You rated " + name + " with " + rating + "!");
 			else
 				alert("Ocenili ste restoran " + name + " sa ocenom " + rating + "!");
