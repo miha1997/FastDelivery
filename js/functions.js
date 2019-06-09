@@ -216,7 +216,7 @@ function homeSort(langugage){
 					restaurants[j] = temp;
 				}
 
-		for(var i = 0; i < restaurants.length; i++){
+		for(var i = 0; i < 3; i++){
 			var index = i + 1;
 			document.getElementById('name' + index).innerHTML= restaurants[i].name;
 			if(langugage == 'en')
