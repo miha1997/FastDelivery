@@ -259,13 +259,15 @@ function mySort(val, region, langugage){
 
 function loadBase(){
 	if(localStorage.getItem("restaurants") == null){
-		$.getJSON( "base.json", function( json ) {
-			var restaurants = [];
+		$(document).ready(function(){
+		    $.getJSON( "base.json", function( json ) {
+				var restaurants = [];
 
-			for(var i = 0; i < json.restaurants.length; i++)
-					restaurants.push(json.restaurants[i]);
+				for(var i = 0; i < json.restaurants.length; i++)
+						restaurants.push(json.restaurants[i]);
 
-			localStorage.setItem("restaurants", JSON.stringify(restaurants));
+				localStorage.setItem("restaurants", JSON.stringify(restaurants));
+			});
 		});
 	}
 }
