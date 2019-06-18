@@ -202,6 +202,7 @@ function defaultSort(region, langugage){
 }
 
 function homeSort(langugage){
+
 		var baseRestaurants = JSON.parse(localStorage.getItem("restaurants"));
 		var restaurants = [];
 
@@ -500,7 +501,10 @@ function potvrdi(language) {
 							var sure = confirm("Are you sure?")
 							if(sure) {
 								alert("Your purchase is confirmed!");
-								localStorage.clear(); 
+								localStorage.removeItem('niz'); 
+								localStorage.removeItem('total'); 
+
+								window.open('mycart-en.html');
 								window.close();
 								//tabela se isprazni nakon refresh-a, ali ostaje "puna"
 							}
@@ -509,7 +513,10 @@ function potvrdi(language) {
 							var sure = confirm("Da li ste sigurni?")
 							if(sure) {
 								alert("Vaša kupovina je potvrđena!");
-								localStorage.clear(); 
+								localStorage.removeItem('niz'); 
+								localStorage.removeItem('total');
+
+								window.open('mycart.html');
 								window.close();
 								//tabela se isprazni nakon refresh-a, ali ostaje "puna"
 							}
